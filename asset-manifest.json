@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dishes-store-app/static/css/main.6dea0f05.chunk.css",
+    "main.css": "/dishes-store-app/static/css/main.2ae47eeb.chunk.css",
     "main.js": "/dishes-store-app/static/js/main.cf266140.chunk.js",
     "main.js.map": "/dishes-store-app/static/js/main.cf266140.chunk.js.map",
     "runtime-main.js": "/dishes-store-app/static/js/runtime-main.61f02db8.js",
@@ -10,13 +10,13 @@
     "static/js/3.e8098d22.chunk.js": "/dishes-store-app/static/js/3.e8098d22.chunk.js",
     "static/js/3.e8098d22.chunk.js.map": "/dishes-store-app/static/js/3.e8098d22.chunk.js.map",
     "index.html": "/dishes-store-app/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/dishes-store-app/static/css/main.6dea0f05.chunk.css.map",
+    "static/css/main.2ae47eeb.chunk.css.map": "/dishes-store-app/static/css/main.2ae47eeb.chunk.css.map",
     "static/js/2.52ce564a.chunk.js.LICENSE.txt": "/dishes-store-app/static/js/2.52ce564a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.61f02db8.js",
     "static/js/2.52ce564a.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
+    "static/css/main.2ae47eeb.chunk.css",
     "static/js/main.cf266140.chunk.js"
   ]
 }
