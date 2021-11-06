@@ -9,13 +9,13 @@ export const useModal = () => {
 export const ModalProvider = ({children}) => {
   const [modalForm, setModalForm] = useState(false);
   const [TYpopup, setTYPopup] = useState(false);
-  const toggleTYPopup = () => {
-    setTYPopup(!TYpopup);
-  }
+  const [modalCart, setModalCart] = useState(false);
+  const toggleTYPopup = () => {setTYPopup(!TYpopup);}
   const toggleModalForm = () => setModalForm(!modalForm);
+  const toggleModalCart = () => setModalCart(!modalCart);
 
   return (
-    <ModalContext.Provider value={{TYpopup, modalForm, toggleModalForm, toggleTYPopup}}>
+    <ModalContext.Provider value={{TYpopup, modalForm, toggleModalForm, toggleTYPopup, modalCart, toggleModalCart}}>
       {children}
     </ModalContext.Provider>
   )

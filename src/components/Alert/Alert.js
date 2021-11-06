@@ -27,6 +27,7 @@ const Wrapper = styled.div`
   opacity: 0.8;
   margin: 5px;
   border-radius: 10px;
+  z-index: 300;
   
 span{
   position: absolute;

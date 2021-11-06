@@ -21,10 +21,10 @@ const WrapperTY = styled.div`
   background: lightgray;
   margin-bottom: 1rem;
   position: fixed;
-  top: 200px;
   left: calc(50% - 300px);
-  width: 600px;
+  width: 400px;
   height: 200px;
+  top: 100px;
   font-size: 23px;
   display: flex;
   align-items: center;

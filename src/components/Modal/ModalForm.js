@@ -4,9 +4,10 @@ import styled  from 'styled-components';
 import {useModal, useAlert, useProducts} from "../../providers/hooks";
 
 import TYPopup from "./ThankYouPopup";
+import ModalCart from "./ModalCart"
 
 const ModalForm = () => {
-  const {modalForm, toggleModalForm, toggleTYPopup, TYpopup} = useModal();
+  const {modalCart, modalForm, toggleModalForm, toggleTYPopup, TYpopup} = useModal();
   const {setAlert} = useAlert();
   const {clearCart} = useProducts();
 
@@ -30,6 +31,7 @@ const ModalForm = () => {
 
   return (
     <>
+      {modalCart && <ModalCart/>}
       {modalForm && <Wrapper>
         <span onClick={toggleModalForm}>✕</span>
         <Form  action="" name='userForm'>
@@ -48,7 +50,7 @@ const Wrapper = styled.div`
   background: lightgray;
   margin-bottom: 1rem;
   position: fixed;
-  top: 200px;
+  top: 100px;
   left: calc(50% - 300px);
   
   span{

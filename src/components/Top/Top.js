@@ -6,8 +6,10 @@ import {useModal} from "../../providers/ModalProvider";
 
 const Top = () => {
   const {qty, sum} = useProducts();
-  const {toggleModalForm} = useModal();
-
+  const {toggleModalCart, toggleModalForm} = useModal();
+  const toggleModal = () => {
+    toggleModalCart()
+  }
   return (
     <TopCard>
       <Container>
@@ -18,7 +20,7 @@ const Top = () => {
             </RedInfo> на сумму:
             <RedInfo>{sum}</RedInfo>
           </TopCardInfoItem>
-          <Button onClick={() => toggleModalForm()}>Оформить заказ</Button>
+          <Button onClick={toggleModal}>Оформить заказ</Button>
         </TopCardInfoContainer>
       </Container>
     </TopCard>
@@ -26,12 +28,13 @@ const Top = () => {
 }
 
 const TopCard = styled.div`
-    padding: 0.5rem 0;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: lightgray;
+  padding: 0.5rem 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: lightgray;
+  z-index: 100;
 `
 
 const TopCardInfoContainer = styled.div`

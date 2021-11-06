@@ -5,17 +5,20 @@ import {useProducts} from "../../providers/hooks";
 
 const ProductItem = ({item}) => {
   const {title, imageUrl, price} = item;
-  const {handleSetQty, handleSetSum} = useProducts();
+  const {handleSetQty, handleSetSum, updateList} = useProducts();
   const [currentQty, setCurrentQty] = useState('');
 
   const onChange = (e) => {
     setCurrentQty(Number(e.target.value))
   }
 
-  const addToCart = () => {
-    handleSetSum(currentQty*price)
-    handleSetQty(currentQty)
-    clear()
+  const addToCart = (item) => {
+    if(currentQty){
+      handleSetSum(currentQty*price);
+      handleSetQty(currentQty);
+      updateList(item);
+      clear()
+    }
   }
   const clear = () => {
     setCurrentQty('')
@@ -30,10 +33,10 @@ const ProductItem = ({item}) => {
       <Meta>
        <p>{price}</p>грн.
         <Qty>
-          <input type="number" value={currentQty} onChange={(e)=> onChange(e)}/>
+          <input min="0" type="number" value={currentQty} onChange={(e)=> onChange(e)}/>
           Кол.
         </Qty>
-        <Button onClick={addToCart}>Добавить</Button>
+        <Button onClick={() => addToCart(item)}>Добавить</Button>
       </Meta>
     </Wrapper>
 
@@ -73,12 +76,23 @@ const Qty = styled.div`
     padding: 3px;
   }
 `
-const Input = styled.input``
+
 const Button = styled.div`
   border: 0;
   padding: 4px 8px;
-  background: #2a6496;
+  background-color: #1674d1;
+  border-color: #1674d1;
   color: #fff;
+  transition: transform 0.3s ease;
+  will-change: transform;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1261ae;
+    border-color: #115aa3;
+  }
 `
 
 export default ProductItem;

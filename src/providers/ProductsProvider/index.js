@@ -9,6 +9,7 @@ export const useProducts = () => {
 export const ProductsProvider = ({children}) => {
   const [qty, setQty] = useState(0);
   const [sum, setSum] = useState(0);
+  const [savedProducts, setProductsList] = useState([]);
   const handleSetQty = (currentQty) => {
     setQty(qty + currentQty);
   }
@@ -18,10 +19,15 @@ export const ProductsProvider = ({children}) => {
   const clearCart = () => {
     setQty(0);
     setSum(0);
+    setProductsList([])
+  }
+  const updateList = (item) => {
+    let list = savedProducts.concat(item)
+    setProductsList(list)
   }
 
   return (
-    <ProductsContext.Provider value={{qty, sum, handleSetSum, handleSetQty, clearCart}}>
+    <ProductsContext.Provider value={{qty, sum, handleSetSum, handleSetQty, clearCart, savedProducts, updateList}}>
       {children}
     </ProductsContext.Provider>
   )
