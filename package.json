@@ -1,8 +1,8 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://sphariab.github.io/dishes-store-app/",
   "private": true,
+  "homepage": "https://sphariab.github.io/dishes-store-app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
