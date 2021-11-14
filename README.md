@@ -1,4 +1,4 @@
-# Dishes store (practising React, React Hooks, Context)
+# Dishes store (practising React, React Hooks, Context, Styled Components)
 
 App that helps to order food.
 You can add dishes to the cart, filter them by category, count how much it costs.
